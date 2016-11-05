@@ -3,3 +3,5 @@
 ################################################################################
 
 /hello-net-core/src/hello-net-core/bin/Debug/netcoreapp1.0
+/hello-net-core/src/hello-net-core/node_modules
+/hello-net-core/src/hello-net-core/obj/Debug/netcoreapp1.0
