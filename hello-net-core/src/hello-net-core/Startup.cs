@@ -47,13 +47,19 @@ namespace hello_net_core
                 app.UseExceptionHandler("/Home/Error");
             }
 
+            DefaultFilesOptions options = new DefaultFilesOptions();
+            options.DefaultFileNames.Clear();
+            options.DefaultFileNames.Add("app/index.html");
+
+            app.UseDefaultFiles(options);
+
             app.UseStaticFiles();
 
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    name: "api",
+                    template: "api/{controller}/{action}");
             });
         }
     }
